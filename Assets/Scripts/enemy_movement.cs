@@ -25,6 +25,7 @@ public class enemy_movement : MonoBehaviour
         Comportamientos();
     }
 
+
     public void Comportamientos()
     {
         animator.SetBool("run", false);
