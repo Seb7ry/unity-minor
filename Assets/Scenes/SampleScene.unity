@@ -8446,7 +8446,7 @@ GameObject:
   - component: {fileID: 1314828889}
   - component: {fileID: 1314828888}
   - component: {fileID: 1314828887}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11981,6 +11981,9 @@ MonoBehaviour:
   jumpForce: 130
   speedDash: 4
   timeDash: 0.2
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!95 &1329034348
 Animator:
   serializedVersion: 5
@@ -13722,9 +13725,13 @@ MonoBehaviour:
   target: {fileID: 0}
   rutina: 0
   direccion: 0
-  atack: 0
   speedRun: 0.2
   cronometro: 0
+  rangoVision: 0
+  rangoAtaque: 0
+  atack: 0
+  rango: {fileID: 0}
+  hit: {fileID: 0}
 --- !u!70 &1521313488
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
