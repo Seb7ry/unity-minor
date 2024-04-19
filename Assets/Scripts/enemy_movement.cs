@@ -46,7 +46,7 @@ public class enemy_movement : MonoBehaviour
             switch(rutina)
             {
                 case 0:
-                    animator.SetBool("idle", false);
+                    //animator.SetBool("idle", false);
                     break;
             
                 case 1:

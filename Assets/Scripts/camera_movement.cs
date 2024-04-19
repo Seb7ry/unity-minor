@@ -5,11 +5,16 @@ using UnityEngine;
 public class camera_movement : MonoBehaviour
 {
     public GameObject player;
+    public Vector2 minPosition;
+    public Vector2 maxPosition;
 
-    void Update() {
-        Vector3 position = transform.position;
-        position.x = player.transform.position.x;
-        position.y = player.transform.position.y;
-        transform.position = position;
+       void Update()
+    {
+        Vector3 newPosition = transform.position;
+        newPosition.x = Mathf.Clamp(player.transform.position.x, minPosition.x, maxPosition.x);
+        newPosition.y = Mathf.Clamp(player.transform.position.y, minPosition.y, maxPosition.y);
+        newPosition.z = transform.position.z;
+
+        transform.position = newPosition;
     }
 }
