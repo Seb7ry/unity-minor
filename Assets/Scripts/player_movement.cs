@@ -25,6 +25,8 @@ public class player_movement : MonoBehaviour
     public LayerMask groundLayers;
     private float groundCheckDistance;
 
+    private float wallCheckDistance;
+
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -33,18 +35,40 @@ public class player_movement : MonoBehaviour
 
         // get the distance from the player's collider center, to the bottom of the collider, plus a little bit more
         groundCheckDistance = GetComponent<Collider2D>().bounds.extents.y + 0.1f;
+        wallCheckDistance = GetComponent<Collider2D>().bounds.extents.x + 0.02f;
     }
 
+    bool canMoveLeft = true;
+    bool canMoveRight = true;
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        canMoveLeft = true;
+        canMoveRight = true;
 
-        if(horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if(horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        // Validamos si el Player está tocando alguna pared a la izquierda para evitar su movimiento
+        if(IsTouchingWall(Vector2.left))
+        {     
+            canMoveLeft = false;       
+        } 
+
+        if(horizontal < 0.0f && canMoveLeft) 
+        {
+            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);                
+        }                
+     
+
+        // Validamos si el Player está tocando alguna pared a la derecha para evitar su movimiento
+        if(IsTouchingWall(Vector2.right))
+        {
+            canMoveRight = false;
+        }    
         
-        Animator.SetBool("running", horizontal != 0.0f);
-        
-        Debug.DrawRay(transform.position, -Vector3.up);
+        if(horizontal > 0.0f && canMoveRight) 
+        {
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        }       
+                    
 
         // Validamos si el Player está sobre el Suelo (Ground) para permitir saltar
         if(IsGrounded())
@@ -83,11 +107,31 @@ public class player_movement : MonoBehaviour
         }
     }
 
+    private bool IsTouchingWall(Vector2 vector2D) {
+        Ray2D ray = new Ray2D(transform.position + new Vector3(0.0f, -0.02f, 0.0f), vector2D);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, wallCheckDistance, groundLayers);
+        if(hit) {
+            Debug.DrawLine(ray.origin, hit.point, Color.green);
+            return true;
+        } else {
+            Debug.DrawRay(ray.origin, ray.direction * wallCheckDistance, Color.red);
+            return false;
+        }
+    }
+
     private void FixedUpdate()
     {
         if(puedeMover)
         {
-            Rigidbody2D.velocity = new Vector2(horizontal * speed, Rigidbody2D.velocity.y);
+            if(canMoveLeft && horizontal < 0.0f || canMoveRight && horizontal > 0.0f)
+            {
+                Rigidbody2D.velocity = new Vector2(horizontal * speed, Rigidbody2D.velocity.y);
+                Animator.SetBool("running", horizontal != 0.0f);
+            }        
+            else
+            {
+                Animator.SetBool("running", false);
+            }        
         }
     }
 
