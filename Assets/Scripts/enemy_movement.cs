@@ -12,6 +12,10 @@ public class enemy_movement : MonoBehaviour
     public float speedRun;
     public float cronometro;
 
+    public float patrolRange = 10f; // Rango máximo de patrulla
+    public float patrolStartPosition; // Posición inicial de patrulla
+    public float patrolEndPosition; // Posición final de patrulla
+
     [Header("Attack")]
     public float rangoVision;
     public float rangoAtaque;
@@ -23,6 +27,8 @@ public class enemy_movement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         target = GameObject.Find("player");
+        patrolStartPosition = transform.position.x;
+        patrolEndPosition = patrolStartPosition + patrolRange;
     }
 
     void Update()
@@ -101,6 +107,23 @@ public class enemy_movement : MonoBehaviour
         }
     }
 
+    void Patrol()
+    {
+        // Mover al enemigo dentro del rango de patrulla
+        if (transform.position.x >= patrolStartPosition && transform.position.x <= patrolEndPosition)
+        {
+            // Si está dentro del rango de patrulla, patrullar hacia adelante
+            transform.Translate(Vector3.right * speedRun * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            // Si está fuera del rango de patrulla, invertir dirección de patrulla
+            speedRun *= -1;
+            transform.Rotate(Vector3.up * 180f);
+        }
+    }
+    
     public void FinalAni()
     {
         animator.SetBool("attack", false);
