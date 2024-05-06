@@ -1202,7 +1202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_55
+      name: ataque1
       rect:
         serializedVersion: 2
         x: 27
@@ -1223,7 +1223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_56
+      name: ataque2
       rect:
         serializedVersion: 2
         x: 101
@@ -1244,13 +1244,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_57
+      name: ataque4
       rect:
         serializedVersion: 2
         x: 280
         y: 703
-        width: 25
-        height: 22
+        width: 70
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1273,7 +1273,7 @@ TextureImporter:
         width: 38
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1286,13 +1286,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_59
+      name: ataque5
       rect:
         serializedVersion: 2
         x: 370
         y: 703
-        width: 24
-        height: 22
+        width: 72
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1307,13 +1307,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_60
+      name: ataque6
       rect:
         serializedVersion: 2
-        x: 432
-        y: 696
-        width: 53
-        height: 33
+        x: 461
+        y: 705
+        width: 71
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1328,7 +1328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_61
+      name: ataque3
       rect:
         serializedVersion: 2
         x: 189
@@ -1349,7 +1349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_62
+      name: ataque7
       rect:
         serializedVersion: 2
         x: 552
@@ -1454,7 +1454,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_69
+      name: 1
       rect:
         serializedVersion: 2
         x: 17
@@ -1475,7 +1475,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_70
+      name: 2
       rect:
         serializedVersion: 2
         x: 110
@@ -1496,7 +1496,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_71
+      name: 3
       rect:
         serializedVersion: 2
         x: 205
@@ -1517,13 +1517,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_72
+      name: 4
       rect:
         serializedVersion: 2
         x: 295
         y: 632
-        width: 22
-        height: 16
+        width: 63
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1538,13 +1538,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_74
+      name: 5
       rect:
         serializedVersion: 2
         x: 385
         y: 632
-        width: 22
-        height: 16
+        width: 63
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3102,6 +3102,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      1: 803756748
+      2: -1849342718
+      3: 136175838
+      4: -1168177125
+      5: 489056408
       Sword Master Sprite Sheet 90x37_0: -1494966627
       Sword Master Sprite Sheet 90x37_1: -527978649
       Sword Master Sprite Sheet 90x37_10: -1042073169
@@ -3205,28 +3210,16 @@ TextureImporter:
       Sword Master Sprite Sheet 90x37_52: -1753047904
       Sword Master Sprite Sheet 90x37_53: -390467453
       Sword Master Sprite Sheet 90x37_54: -539802191
-      Sword Master Sprite Sheet 90x37_55: 1707663002
-      Sword Master Sprite Sheet 90x37_56: 571933408
-      Sword Master Sprite Sheet 90x37_57: -1183710129
       Sword Master Sprite Sheet 90x37_58: 1489479065
-      Sword Master Sprite Sheet 90x37_59: 208686365
       Sword Master Sprite Sheet 90x37_6: -1787176033
-      Sword Master Sprite Sheet 90x37_60: -821934138
-      Sword Master Sprite Sheet 90x37_61: 366856879
-      Sword Master Sprite Sheet 90x37_62: 215678720
       Sword Master Sprite Sheet 90x37_63: 1756097818
       Sword Master Sprite Sheet 90x37_64: 1705713729
       Sword Master Sprite Sheet 90x37_65: -1254042197
       Sword Master Sprite Sheet 90x37_66: -1696416695
       Sword Master Sprite Sheet 90x37_67: -2112847213
       Sword Master Sprite Sheet 90x37_68: -1982922746
-      Sword Master Sprite Sheet 90x37_69: 803756748
       Sword Master Sprite Sheet 90x37_7: 1977262749
-      Sword Master Sprite Sheet 90x37_70: -1849342718
-      Sword Master Sprite Sheet 90x37_71: 136175838
-      Sword Master Sprite Sheet 90x37_72: -1168177125
       Sword Master Sprite Sheet 90x37_73: -422123202
-      Sword Master Sprite Sheet 90x37_74: 489056408
       Sword Master Sprite Sheet 90x37_75: -552148041
       Sword Master Sprite Sheet 90x37_76: 2021327520
       Sword Master Sprite Sheet 90x37_77: 1363978456
@@ -3254,6 +3247,13 @@ TextureImporter:
       Sword Master Sprite Sheet 90x37_97: -650407282
       Sword Master Sprite Sheet 90x37_98: -1330792874
       Sword Master Sprite Sheet 90x37_99: 43227759
+      ataque1: 1707663002
+      ataque2: 571933408
+      ataque3: 366856879
+      ataque4: -1183710129
+      ataque5: 208686365
+      ataque6: -821934138
+      ataque7: 215678720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
