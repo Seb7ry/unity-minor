@@ -12,7 +12,7 @@ public class pauseMenu : MonoBehaviour
 
     void Start()
     {
-        juegoPausado = true;
+        juegoPausado = false;
     }
 
     void Update()

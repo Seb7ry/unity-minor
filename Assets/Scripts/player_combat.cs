@@ -7,6 +7,7 @@ public class player_combat : MonoBehaviour
     [SerializeField] private Transform controladorgolpe;
     [SerializeField] private float radioGolpe;
     [SerializeField] private float dañoGolpe;
+    [SerializeField] private int vida;
     private Animator animator;
 
     void Start()
@@ -18,6 +19,13 @@ public class player_combat : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.V)){
             Golpe();
+        }
+    }
+
+    public void TomarDaño(int cantidadDaño){
+        vida -= cantidadDaño;
+        if(vida <= 0){
+            Destroy(gameObject);
         }
     }
 
