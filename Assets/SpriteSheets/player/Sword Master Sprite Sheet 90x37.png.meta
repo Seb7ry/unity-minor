@@ -2966,7 +2966,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_146
+      name: death1
       rect:
         serializedVersion: 2
         x: 16
@@ -2987,7 +2987,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_147
+      name: death2
       rect:
         serializedVersion: 2
         x: 106
@@ -3008,7 +3008,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_148
+      name: death3
       rect:
         serializedVersion: 2
         x: 196
@@ -3029,7 +3029,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_149
+      name: death4
       rect:
         serializedVersion: 2
         x: 288
@@ -3050,7 +3050,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_150
+      name: death5
       rect:
         serializedVersion: 2
         x: 379
@@ -3071,7 +3071,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_151
+      name: death6
       rect:
         serializedVersion: 2
         x: 470
@@ -3160,13 +3160,7 @@ TextureImporter:
       Sword Master Sprite Sheet 90x37_143: -1688272951
       Sword Master Sprite Sheet 90x37_144: -217679656
       Sword Master Sprite Sheet 90x37_145: -1133603337
-      Sword Master Sprite Sheet 90x37_146: -1187194263
-      Sword Master Sprite Sheet 90x37_147: 518847887
-      Sword Master Sprite Sheet 90x37_148: -274659290
-      Sword Master Sprite Sheet 90x37_149: 1014749024
       Sword Master Sprite Sheet 90x37_15: 1398286357
-      Sword Master Sprite Sheet 90x37_150: -1170160765
-      Sword Master Sprite Sheet 90x37_151: -260440144
       Sword Master Sprite Sheet 90x37_16: -256306993
       Sword Master Sprite Sheet 90x37_17: -1831450755
       Sword Master Sprite Sheet 90x37_18: -451450681
@@ -3254,6 +3248,12 @@ TextureImporter:
       ataque5: 208686365
       ataque6: -821934138
       ataque7: 215678720
+      death1: -1187194263
+      death2: 518847887
+      death3: -274659290
+      death4: 1014749024
+      death5: -1170160765
+      death6: -260440144
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
