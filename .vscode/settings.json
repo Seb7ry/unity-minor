@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "minor.sln"
+    "dotnet.defaultSolution": "unity-minor.sln"
 }
