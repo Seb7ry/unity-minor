@@ -7,14 +7,18 @@ public class enemy_movement : MonoBehaviour
     [Header("Movimiento")]
     private Animator animator;
     public GameObject target;
-    public int rutina;
-    public int direccion;
-    public float speedRun;
-    public float cronometro;
-
-    public float patrolRange = 10f; // Rango máximo de patrulla
-    public float patrolStartPosition; // Posición inicial de patrulla
-    public float patrolEndPosition; // Posición final de patrulla
+    public Rigidbody2D rb2d;
+    public float velocidadMovimiento;
+    public LayerMask capaAbajo;
+    public LayerMask capaEnfrente;
+    public float distanciaAbajo;
+    public float distanciaEnfrente;
+    public Transform controladorAbajo;
+    public Transform controladorEnfrente;
+    public bool informacionAbajo;
+    public bool informacionEnfrente;
+    private bool mirandoALaDerecha = true;
+    
 
     [Header("Attack")]
     public float rangoVision;
@@ -29,113 +33,42 @@ public class enemy_movement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         target = GameObject.Find("player");
-        patrolStartPosition = transform.position.x;
-        patrolEndPosition = patrolStartPosition + patrolRange;
+   
     }
 
     void Update()
     {
-        if (!isDead) // Solo actualiza si no está muerto
+        if (!isDead)
         {
-            Comportamientos();
-        }
-    }
+            rb2d.velocity = new Vector2(velocidadMovimiento, rb2d.velocity.y);
+            informacionEnfrente = Physics2D.Raycast(controladorEnfrente.position, transform.right, distanciaEnfrente, capaEnfrente);
+            informacionAbajo = Physics2D.Raycast(controladorAbajo.position, transform.up * -1, distanciaAbajo, capaAbajo);
 
-    public void Comportamientos()
-    {
-        if (Mathf.Abs(transform.position.x - target.transform.position.x) > rangoVision && !atack)
-        {
-            animator.SetBool("run", false);
-            cronometro += 1 * Time.deltaTime;
-            if (cronometro >= 4)
+            if(informacionEnfrente || !informacionAbajo)
             {
-                rutina = Random.Range(0, 2);
-                cronometro = 0;
-            }
-
-            switch (rutina)
-            {
-                case 0:
-                    //animator.SetBool("idle", false);
-                    break;
-
-                case 1:
-                    direccion = Random.Range(0, 2);
-                    rutina++;
-                    break;
-                case 2:
-                    switch (direccion)
-                    {
-                        case 0:
-                            transform.rotation = Quaternion.Euler(0, 0, 0);
-                            transform.Translate(Vector3.right * speedRun * Time.deltaTime);
-                            break;
-                        case 1:
-                            transform.rotation = Quaternion.Euler(0, 180, 0);
-                            transform.Translate(Vector3.right * speedRun * Time.deltaTime);
-                            break;
-                    }
-                    break;
-            }
-        }
-        else
-        {
-            if (Mathf.Abs(transform.position.x - target.transform.position.x) > rangoAtaque && !atack)
-            {
-                if (transform.position.x < target.transform.position.x)
-                {
-                    transform.Translate(Vector3.right * 0.6f * Time.deltaTime);
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
-                    animator.SetBool("attack", false);
-                }
-                else
-                {
-                    transform.Translate(Vector3.right * 0.6f * Time.deltaTime);
-                    transform.rotation = Quaternion.Euler(0, 180, 0);
-                    animator.SetBool("attack", false);
-                }
-            }
-            else
-            {
-                if (!atack)
-                {
-                    if (transform.position.x < target.transform.position.x)
-                    {
-                        transform.rotation = Quaternion.Euler(0, 0, 0);
-                    }
-                    else
-                    {
-                        transform.rotation = Quaternion.Euler(0, 180, 0);
-                    }
-                    animator.SetBool("run", false);
-                }
+                Girar();
             }
         }
     }
 
-    public void FinalAni()
+    private void Girar()
     {
-        animator.SetBool("attack", false);
-        atack = false;
-        rango.GetComponent<BoxCollider2D>().enabled = true;
+        mirandoALaDerecha = !mirandoALaDerecha;
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        velocidadMovimiento *= -1;
     }
 
-    public void ColliderWeaponTrue()
+    private void OnDrawGizmos()
     {
-        hit.GetComponent<BoxCollider2D>().enabled = true;
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(controladorAbajo.transform.position, controladorAbajo.transform.position + transform.up * -1 * distanciaAbajo);
+        Gizmos.DrawLine(controladorEnfrente.transform.position, controladorEnfrente.transform.position + transform.right * distanciaEnfrente);
     }
 
-    public void ColliderWeaponFalse()
-    {
-        hit.GetComponent<BoxCollider2D>().enabled = false;
-    }
-
-    // Método para establecer el estado de muerto
     public void SetDead()
     {
         isDead = true;
-        // Detén cualquier movimiento adicional
-        speedRun = 0;
+        velocidadMovimiento = 0;
         animator.SetBool("run", false);
         animator.SetBool("attack", false);
     }

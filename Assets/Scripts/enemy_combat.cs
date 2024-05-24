@@ -6,12 +6,12 @@ public class enemy_combat : MonoBehaviour
 {
     [SerializeField] private float vida;
     private Animator animator;
-    private enemy_movement enemyMovement; // Referencia al script de movimiento
+    private enemy_movement enemyMovement;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        enemyMovement = GetComponent<enemy_movement>(); // Obtén el componente de movimiento
+        enemyMovement = GetComponent<enemy_movement>();
     }
 
     public void TomarDaño(float daño)
@@ -28,8 +28,7 @@ public class enemy_combat : MonoBehaviour
         animator.SetTrigger("dead");
         if (enemyMovement != null)
         {
-            enemyMovement.enabled = false; // Desactiva el script de movimiento
+            enemyMovement.enabled = false;
         }
-        // También puedes desactivar otros componentes o colisionadores si es necesario
     }
 }

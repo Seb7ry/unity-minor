@@ -1226,7 +1226,7 @@ TextureImporter:
       name: ataque2
       rect:
         serializedVersion: 2
-        x: 101
+        x: 103
         y: 707
         width: 73
         height: 22
@@ -1832,7 +1832,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_90
+      name: dash1
       rect:
         serializedVersion: 2
         x: 7
@@ -1853,7 +1853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_91
+      name: dash3
       rect:
         serializedVersion: 2
         x: 183
@@ -1874,7 +1874,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_93
+      name: dash4
       rect:
         serializedVersion: 2
         x: 273
@@ -1895,7 +1895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_94
+      name: dash5
       rect:
         serializedVersion: 2
         x: 366
@@ -1916,7 +1916,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_95
+      name: dash2
       rect:
         serializedVersion: 2
         x: 94
@@ -1937,7 +1937,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword Master Sprite Sheet 90x37_97
+      name: dash6
       rect:
         serializedVersion: 2
         x: 462
@@ -3231,14 +3231,8 @@ TextureImporter:
       Sword Master Sprite Sheet 90x37_88: 884282875
       Sword Master Sprite Sheet 90x37_89: -421588123
       Sword Master Sprite Sheet 90x37_9: 792784211
-      Sword Master Sprite Sheet 90x37_90: 445267778
-      Sword Master Sprite Sheet 90x37_91: -317237478
       Sword Master Sprite Sheet 90x37_92: -1373899878
-      Sword Master Sprite Sheet 90x37_93: -112681768
-      Sword Master Sprite Sheet 90x37_94: -203302013
-      Sword Master Sprite Sheet 90x37_95: 797530210
       Sword Master Sprite Sheet 90x37_96: -864829896
-      Sword Master Sprite Sheet 90x37_97: -650407282
       Sword Master Sprite Sheet 90x37_98: -1330792874
       Sword Master Sprite Sheet 90x37_99: 43227759
       ataque1: 1707663002
@@ -3248,6 +3242,12 @@ TextureImporter:
       ataque5: 208686365
       ataque6: -821934138
       ataque7: 215678720
+      dash1: 445267778
+      dash2: 797530210
+      dash3: -317237478
+      dash4: -112681768
+      dash5: -203302013
+      dash6: -650407282
       death1: -1187194263
       death2: 518847887
       death3: -274659290
