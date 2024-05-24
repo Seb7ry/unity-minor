@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d4e32e04c2c429446af01741e6128c26
+guid: 69b82eae1c3aee34e9c87d068a52e58a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,118 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: keyboard_1
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 0
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d4c17497bb4a9b4da00f2530975d441
-      internalID: 1633083272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keyboard_2
-      rect:
-        serializedVersion: 2
-        x: 26
-        y: 0
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b4055e9744018247b3807cb2e051e85
-      internalID: 1768777933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keyboard_3
-      rect:
-        serializedVersion: 2
-        x: 286
-        y: 0
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50678b18ca5aff24c952f464dd3ca6cb
-      internalID: -2126307124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keyboard_4
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 0
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb347b6d683994b4d94810059d9fcc30
-      internalID: 1560847617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keyboard_5
-      rect:
-        serializedVersion: 2
-        x: 312
-        y: 0
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14a4c54b732c30b4aa0b403a1474fe59
-      internalID: 1664968569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keyboard_6
+      name: D-Key_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 13
-        height: 13
+        width: 32
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ffd5dc6327fa2e4db7f76e2a638afe3
-      internalID: -352219409
+      spriteID: d44bb86e6d3205a48a3c837e5f9a73b4
+      internalID: -594837846
       vertices: []
       indices: 
       edges: []
@@ -246,13 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      keyboard_0: -1774039003
-      keyboard_1: -1793263136
-      keyboard_2: 1633083272
-      keyboard_3: -787087138
-      keyboard_4: 1768777933
-      keyboard_5: -2126307124
-      keyboard_6: -352219409
+      D-Key_0: -594837846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
